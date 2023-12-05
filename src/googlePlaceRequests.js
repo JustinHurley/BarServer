@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const placesRequest = async (location) => {
-    const apiKey = 'AIzaSyBD3HYqPJ_tej9idod3ZiH-WnzmfchWCx8';
+    const apiKey = '';
     const locationString = location[0] + ',' + location[1];
     const placesApiUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationString}&radius=1000&type=bar&key=${apiKey}`;
 
