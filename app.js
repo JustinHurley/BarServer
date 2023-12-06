@@ -19,7 +19,6 @@ app.post('/', bodyParser.json(), async (req, res) => {
   	console.log('Received request with message: ', JSON.stringify(req.body));
 	try {
 		const places = await placesRequest([req.body.location.latitude, req.body.location.longitude])
-		console.log(`Successfully returning places`)
 		res.send(places);
 	} catch (e) {
 		console.error(`Unable to get locations: ${err}`);
